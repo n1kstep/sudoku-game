@@ -151,7 +151,7 @@ def sudoku_solver(field, i=0, j=0):
 
 session = Session()
 session.clear()
-session.state = input("Enter 'ai' to solve automatically or\n"
+session.state = input("Enter 'auto' to solve the game automatically or\n"
                         "Enter 'play' to start the game:\n")
 session.clear()
 if session.state == "play":
@@ -208,7 +208,7 @@ if session.state == "play":
             print("You won the game")
         else:
             print("You lost the game")
-elif session.state == "ai":
+elif session.state == "auto":
     session.set_field(int(input("Enter the number of prompts:\n")))
     session.clear()
     session.print_field()
